@@ -6,6 +6,7 @@ def home(request):
     context = {
         "content": about_html,
         "title": "Home Page",
+        "active_home": "active",
     }
     return render(request, "base.html", context)
 
