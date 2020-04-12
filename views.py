@@ -16,6 +16,7 @@ def blog(request):
     context = {
         "content": blog_html,
         "title": "My Blog",
+        "active_blog": "active",
     }
     return render(request, "base.html", context)
 
@@ -24,6 +25,7 @@ def contact(request):
     context = {
         "content": contact_html,
         "title": "Contact Page",
+        "active_contact": "active",
     }
     return render(request, "base.html", context)
 
@@ -32,5 +34,6 @@ def projects(request):
     context = {
         "content": projects_html,
         "title": "My Projects",
+        "active_projects": "active",
     }
     return render(request, "base.html", context)
