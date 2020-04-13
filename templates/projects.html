@@ -11,8 +11,18 @@ My Projects
 <div class="col-xl-9 mx-auto">
 <div class="projects-inner text-center rounded">
 <h2 class="section-heading mb-5">
-<span class="section-heading-upper">Content Coming Soon!</span>
+<span class="section-heading-upper">My Projects</span>
 </h2>
+</div>
+<div class="border contact-form border-light p-5 mt-4 text-center rounded">
+<h1 class="section-heading mb-5">
+<span class="section-heading-lower">GitHub Repositories</span>
+</h1>
+<ol>
+{% for repo in github_repos %}
+<li><a href="{{ repo.html_url }}">{{ repo.name }}</a></li>
+{% endfor %}
+</ol>
 </div>
 </div>
 </div>
