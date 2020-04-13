@@ -21,7 +21,10 @@ def contact(request):
     return render(request, "contact.html", context)
 
 def projects(request):
+    response = requests.get('https://api.github.com/users/zlake23/repos')
+    repos = response.json()
     context = {
         "active_projects": "active",
+        'github_repos': repos,
     }
     return render(request, "projects.html", context)
